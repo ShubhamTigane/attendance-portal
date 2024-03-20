@@ -15,10 +15,10 @@ connectDB();
 const app = express();
 
 //middlewares
-app.use(cors(
-  {origin:["https://attendance-portal-d4pi.vercel.app/"],
-methods:["POST","GET"],
-credentials:true
+app.use(cors({
+  origin: ["https://attendance-portal-d4pi.vercel.app"],
+  methods: ["POST", "GET"],
+  credentials: true
 }
 ))
 app.use(express.json());
