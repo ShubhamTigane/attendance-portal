@@ -15,7 +15,12 @@ connectDB();
 const app = express();
 
 //middlewares
-app.use(cors())
+app.use(cors(
+  {origin:[" "],
+methods:["POST","GET"],
+credentials:true
+}
+))
 app.use(express.json());
 app.use(morgan("dev"));
 
